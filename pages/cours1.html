@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+<script> 
+
+// commentaire en JS
+// équivalent d'un echo en PHP
+    console.log("Bonjour Javascript !");
+
+
+/********************************************
+Variable en JS
+********************************************/
+
+
+// variable de type string
+
+    let prenom1 = "Lea";
+    let prenom2 = "Emilie"; 
+
+    console.log(prenom1);
+    console.log(prenom2);
+
+    // variable de type logique, booléen = true ou false
+    let isVrai = true;
+    console.log(isVrai);
+
+    //variable CONSTANTE
+    const nombrePi = 3.1416;
+    console.log(nombrePi);
+
+    //opérateur de concaténation entre 2 chaines de caractères + 
+    console.log(prenom1 + " et " + prenom2 + " ! ");
+
+    // saut de ligne 
+    console.log("\n\n"); 
+
+
+/********************************************
+Arithmetique (opérateurs)
+********************************************/
+
+
+    let somme = 100;
+
+    // opérateur modulo (1 = impaire, 0 = paire)
+    let mod = somme % 2;
+    console.log("Modulo=" + mod);
+
+    // opérateur incrémentation
+    let inc = ++somme;
+    console.log("Incrémente=" + inc);
+
+    // opérateur décrémentation 
+    let dec = --somme;
+    console.log("Décrémente=" + dec);
+
+    // saut de ligne 
+    console.log("\n\n"); 
+
+
+/********************************************
+Opérateurs d'assignement
+********************************************/
+
+
+    let sum = 10;
+
+    sum += 100;
+    console.log("+=" + sum);
+    sum -= 10;
+    console.log("-=" + sum);
+    sum *= 10;
+    console.log("*=" + sum);
+    sum /= 10;
+    console.log("/=" + sum);
+
+    console.log("\n\n"); 
+
+
+/********************************************
+Opérateurs de comparaison
+********************************************/
+
+
+    let str1 = "JavaScript", 
+        str2 = "JAVASCRIPT", 
+        nbr = 50, 
+        str3 = "50";
+
+    console.log(str1 === "javascript");
+
+    console.log(str2 === "javaScript");
+
+    // différent de 
+    console.log(str2 !== "javascript");
+
+    console.log(nbr == str3);
+
+    // utilisez toujours de preference le triple =
+    console.log(nbr === str3);
+
+
+/********************************************
+Opérateurs de comparaison
+********************************************/
+
+
+    let result, bool1 = true, bool2 = false;
+
+    // et / and (le faux gagne toujours avec "et")
+    result = bool1 && bool2;
+    console.log("AND=" + result);
+
+    // ou / or (true gagne toujours avec "ou")
+    result = bool1 || bool2;
+    console.log("OR=" + result);
+
+    // non (! = inverse)
+    result = !bool1;
+    console.log("NOT=" + result);
+
+    console.log("\n\n"); 
+
+
+/********************************************
+Test if
+********************************************/
+
+
+    if(5 < 2)
+    {
+        console.log("ECHEC");
+
+    }
+    else
+    {
+        console.log("SUCCES");
+    }
+
+    let flag = true;
+    if(!flag)
+        console.log("OFF");
+    else
+        console.log("ON");
+
+
+    const num = 11;
+    if(num === 5)
+        console.log("Nombre 5");
+    else if(num === 10)
+        console.log("Nombre 10");
+    else 
+        console.log("Nombre ni 5 ni 10"); 
+
+
+/********************************************
+Boucles for
+********************************************/
+
+
+    for(i = 1 ; i < 20; i++)
+    {
+        console.log("Nombre" + i);
+    }
+
+
+/********************************************
+Boucles for
+********************************************/
+
+
+    let j = 1;
+
+    while(j < 11)
+    {
+        console.log("Nombre" + j);
+        j++;
+    }
+
+    console.log("\n\n"); 
+
+
+/********************************************
+Boucles for
+********************************************/
+
+
+    let monTableau = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin"];
+
+        console.log(monTableau[0]); 
+        console.log(monTableau[1]);
+        console.log(monTableau[2]);
+        console.log(monTableau[3]);
+        console.log(monTableau[4]);
+        console.log(monTableau[5]);
+        console.log(monTableau);
+
+        console.log("Longueur=" + monTableau.length);
+
+        console.log("\n\n");
+
+
+/********************************************
+Dates
+********************************************/
+
+
+    // initialisation objet date
+    const now = new Date();
+
+    // affichage 
+    console.log(now);
+    console.log(now.toUTCString());
+    console.log(now.toString());
+
+    let year = now.getFullYear();
+    console.log(year);
+
+    // mois commence à 0 
+    let month = now.getMonth();
+    console.log(month);
+
+    let dayNumber = now.getDate();
+    console.log(dayNumber);
+
+    let dayName = now.getDay();
+    console.log(dayName); 
+
+    console.log("Date au format FR:" + dayNumber+"/"+ (month+1) +"/"+year); 
+
+    // heures
+    let hour = now.getHours();
+    let minute = now.getMinutes();
+    let second = now.getSeconds();
+    let millisecond = now.getMilliseconds();
+
+    console.log("HEURE: " + hour +":" + minute +":" + second + ":" + millisecond); 
+
+
+/********************************************
+String : chaine de caractères
+********************************************/
+
+
+    let langage = "JavaScript";
+
+    console.log("MAJ: " + langage.toUpperCase());
+    console.log("MIN: " + langage.toLowerCase());
+    console.log("Concaténation: " + langage + " devient " + langage.toUpperCase() + "!");
+    console.log("Longueur=" + langage/length);
+    console.log("1er élément= " + langage[0]);
+    console.log("dernier élément= " + langage[langage.length - 1]); 
+
+
+    langage = "JavaScript est un langage génial !";
+    // extraire une sous-chaine, substr est plus facile à utiliser que substring
+    console.log("substr= " + langage.substr(26, 8));
+    // trancher une chaine 
+    console.log("slice= " + langage.slice(0,10)); 
+    // diviser une chaine
+    console.log("split+ " + langage.split(" ")); 
+
+
+/********************************************
+Recherche
+********************************************/
+
+
+    // RECHERCHE 
+    //case-sensitive
+    console.log("search= " + langage.search("Script"));
+    console.log("search= " + langage.search("script"));
+    console.log("search= " + langage.search("Java"));
+
+    console.log("match= " + langage.match("Script"));
+    console.log("match= " + langage.match("script"));
+    console.log("match= " + langage.match("Java"));
+
+    console.log("indexOf= " + langage.indexOf("a"));
+    console.log("lastIndexOf= " + langage.lastIndexOf("a"));
+        
+    console.log("charAt= " + langage.charAt("1"));
+
+    // juste une copie, l'originale n'est pas modifiée
+    console.log("replace= " + langage.replace("a", "*"));
+
+        
+    langage = "  JavaScript est un langage génial ! ";
+
+    console.log("startsWith= " + langage.startsWith("J"));
+    console.log("endsWith= " + langage.endsWith("!"));
+
+    langage = langage.trim();
+    console.log("trim= " + langage);
+    console.log("startsWith= " + langage.startsWith("J"));
+    console.log("endsWith= " + langage.endsWith("!"));
+
+    console.log("includes= " + langage.includes("java"));
+    console.log("includes= " + langage.includes("Java"));
+
+    console.log("\nduplication= " + langage.repeat(3));
+
+
+/********************************************
+Fonctions
+********************************************/
+
+
+    function square(arg1)
+    {
+        return arg1 * arg1;
+    }
+
+
+    function add(arg1, arg2 = 10)
+    {
+        return arg1 + arg2;
+    }
+
+
+    function squareAndAdd(arg1)
+    {
+        let result = square(arg1);
+        return result + add(arg1);
+    }
+
+
+    console.log("8x8: " + square(8));
+    console.log("8+20: " + add(8, 20));
+    console.log("8+10: " + add(8));
+    console.log("(8x8)+(8+10): " + squareAndAdd(8));
+
+
+/********************************************
+Math
+********************************************/
+
+
+    let nbr10 = -45, nbr20 = 50, nbr30 = 60;
+
+    console.log("CONST PI= " + Math.PI);
+
+    console.log("abs= " + Math.abs(nbr10));
+
+    console.log("puissance= " + Math.pow(nbr20, 2));
+
+    console.log("min= " + Math.min(nbr20, nbr30));
+
+    console.log("max= " + Math.max(nbr10, nbr20));
+
+
+    let nbr4 = 98.6;
+    //UP
+    console.log("ceil= " + Math.ceil(nbr4));
+    //DOWN
+    console.log("floor= " + Math.floor(nbr4));
+
+    //round = rounds UP by default
+    //round(7.5)=8
+    console.log("round= " + Math.round(nbr4));
+
+        
+    //Imprécision de JS sur des nombres décimaux, normalement 1224.9 !
+    console.log("Imprécision JS: " + (81.66 * 15));
+
+
+    //ALEATOIRE
+    //Générateur de nombre aléatoire de 1 à 10
+
+    let rand = Math.ceil(Math.random() * 10);
+
+    console.log(rand);
+
+    //Générateur de 10 chiffres aléatoires
+    for(i = 1; i <= 10; i++)
+    {
+        let rand = Math.ceil(Math.random() * 10);
+
+        console.log(rand);
+    }
+
+    //Générateur de 10 chiffres sur une ligne 
+    let liste = "";
+
+    for(i = 1; i <= 10; i++)
+    {
+        let rand = Math.ceil(Math.random() * 10);
+
+        liste += rand + " ";
+    }
+
+    console.log(liste);
+
+    console.log("\n\n"); 
+
+
+
+
+</script>
+
+</body>
+</html>
